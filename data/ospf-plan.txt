@@ -1,0 +1,20 @@
+·   my $ospfNbrRtrId = "1.3.6.1.2.1.14.10.1.3";
+·   my $ospfNbrState = "1.3.6.1.2.1.14.10.1.6";
+
+ospf 1.3.6.1.2.1.14
+ospfNbrTable { ospf 10 }
+
+ospfNbrEntry { ospfNbrTable 1 }
+
+ospfNbrRtrId { ospfNbrEntry 3 }  // 1.3.6.1.2.1.14.10.1.3
+
+ospfNbrState { ospfNbrEntry 6 }  // 1.3.6.1.2.1.14.10.1.6
+ down (1),
+ attempt (2),
+ init (3),
+ twoWay (4),
+ exchangeStart (5),
+ exchange (6),
+ loading (7),
+ full (8)
+
